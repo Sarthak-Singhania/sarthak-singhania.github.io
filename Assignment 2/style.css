@@ -120,7 +120,7 @@ body
     margin: auto;
 }
 
-#content #newsList #topStoriesContainer .news-item {
+#content #newsList #imageList .news-item {
     text-decoration: none;
     display: block;
     border: 1px solid rgba(0, 0, 0, 0.14);
@@ -131,34 +131,34 @@ body
     color: black;
 }
 
-#content #newsList #topStoriesContainer .news-item:hover {
+#content #newsList #imageList .news-item:hover {
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.25);
 }
 
-#content #newsList #topStoriesContainer .news-item .news-title {
+#content #newsList #imageList .news-item .news-title {
     font-size: 1.5rem;
     font-weight: 500;
 }
 
-#content #newsList #topStoriesContainer .news-item .news-byline {
+#content #newsList #imageList .news-item .news-byline {
     font-size: 0.75rem;
     color: #444;
 }
 
-#content #newsList #topStoriesContainer .news-item .news-time {
+#content #newsList #imageList .news-item .news-time {
     font-size: 0.75rem;
     color: #444;
 }
 
-#content #newsList #topStoriesContainer .news-item .news-time::before {
+#content #newsList #imageList .news-item .news-time::before {
     content: 'posted at ';
 }
 
-#content #newsList #topStoriesContainer .news-item .news-score {
+#content #newsList #imageList .news-item .news-score {
     color: rgba(10, 180, 13, 0.4);
 }
 
-#content #newsList #topStoriesContainer .news-item .news-score i {
+#content #newsList #imageList .news-item .news-score i {
     margin-right: 1rem;
 }
 

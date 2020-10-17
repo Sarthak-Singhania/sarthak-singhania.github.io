@@ -14,6 +14,23 @@ function clicker(headingText) {
     fetcher();
 }
 
+async function getWeather()
+{
+    const iconElement = document.querySelector("#weatherIcon");
+    const tempElement = document.querySelector("#temperature-value p");
+    const descElement = document.querySelector("#weather-description p");
+    const weather=await fetch(`https://api.openweathermap.org/data/2.5/weather?id=1273294&appid=a2d66cdf165023cb5dd9f90d8f18a54e`);
+    const weather_resp=await weather.json();
+    const temp=Math.floor(weather_resp.main.temp-273.15);
+    const description_weather=weather_resp.weather[0].main;
+    const weather_icon=weather_resp.weather[0].icon;
+    iconElement.innerHTML = `<img src="icons/${weather_icon}.png"/>`;
+    descElement.innerHTML = description_weather;
+    tempElement.innerHTML = `${temp}°<span>C</span>`;
+    console.log(weather_resp);
+}
+
+getWeather()
 async function fetcher()
 {
     document.querySelector("#imageList").innerHTML = "";
